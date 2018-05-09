@@ -7,33 +7,31 @@ import java.util.Date;
 public class Quiz {
     private static Question[] questionList = new Question[]{
         //TODO Cadastrar as perguntas conforme as linhas abaixo:
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Homem-Aranha", "Chapolin", "Capitão América"})
+        new Question("1Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("2Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("3Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("4Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("5Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("6Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("7Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("8Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("9Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("10Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("11Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("12Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("13Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("14Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("15Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"})
+        
     };
     
-    private static ArrayList<Quiz> getTopTenQuizzes(){
-        ArrayList<Quiz> ret = new ArrayList<>();
-        //TODO ordernar os quizzes realizados por nota; recuperá-los através da User.userList
-        return null;
-    }
+    public static ArrayList<Quiz> topTenQuizzes = new ArrayList<>();
+    public static ArrayList<Quiz> lastestTenQuizzes = new ArrayList<>();
     
-    private static ArrayList<Quiz> getLastestTenQuizzes(){
-        //TODO ordenar os quizzes por ordem decrescente de data
-        //Outra opção: Manter uma lista que é atualizada cada vez que um Quiz é finalizado
-        return null;
-    }
     private ArrayList<Question> test;
     private double grade;
     private Date date;
+    private User user;
 
 //    public static void main(String[] args){
 //        Quiz q = new Quiz();
@@ -42,8 +40,8 @@ public class Quiz {
 //        }
 //        System.out.println(q.date.toLocaleString());
 //    }
-    public Quiz() {
-        //A nota deve ser atualizada com o método setGrade quando o usuário terminar o teste
+    public Quiz(User user) {
+        this.user = user;
         grade = 0d;
         date = Calendar.getInstance().getTime();
         test = new ArrayList<>(10);
@@ -60,15 +58,42 @@ public class Quiz {
         return grade;
     }
 
-    public void setGrade(double grade) {
-        this.grade = grade;
-        //Ao definir a nota final, atualiza a hora:
-        this.date = Calendar.getInstance().getTime();
-    }
-
     public String getDate() {
         return date.toLocaleString();
     }
 
+    public User getUser(){
+        return this.user;
+    }
     
+    public void finishTest(double grade){
+        this.grade = grade;
+        this.date = Calendar.getInstance().getTime();
+        this.user.getFinishedQuizzes().add(this);
+        
+        lastestTenQuizzes.add(0, this);
+        if (lastestTenQuizzes.size()>10){
+            lastestTenQuizzes.remove(10);
+        }
+        
+        int size = topTenQuizzes.size();
+        if (size==0){
+            topTenQuizzes.add(this);
+        } 
+        else {
+            int i = size;
+            
+            while (i>0 && this.grade>topTenQuizzes.get(i-1).grade){
+                i--;
+            }
+            
+            if (i<10){
+                topTenQuizzes.add(i, this);
+            }
+            
+            if (topTenQuizzes.size()>10){
+                topTenQuizzes.remove(10);
+            }
+        }
+    }
 }

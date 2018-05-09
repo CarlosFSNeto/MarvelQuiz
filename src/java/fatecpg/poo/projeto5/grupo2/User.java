@@ -1,19 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package fatecpg.poo.projeto5.grupo2;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Outline
- */
 public class User {
     public static ArrayList<User> userList = new ArrayList<>();
     
+    public User(String name){
+        this.name=name;
+        this.finishedQuizzes = new ArrayList<>();
+        //Adicionar o usuário na userList: aqui ou no JSP?
+        //userList.add(this);
+    }
     private String name;
     private ArrayList<Quiz> finishedQuizzes;
 
@@ -30,10 +27,18 @@ public class User {
     }
     
     public double getUserAverageGrade(){
+        if (finishedQuizzes.isEmpty()){
+            return 0;
+        }
         double sum = 0;
         for(Quiz q:finishedQuizzes){
             sum += q.getGrade();
         }
         return sum / (double)finishedQuizzes.size();
+    }
+    
+    @Override
+    public String toString(){
+        return this.name;
     }
 }
