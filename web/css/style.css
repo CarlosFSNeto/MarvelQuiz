@@ -1,0 +1,126 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09/05/2018, 23:01:41
+    Author     : Ton
+*/
+
+/* CABEÇALHO */
+
+
+header ul li{
+    font-size: 18px;
+    display: inline-block;
+    list-style: none;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.menu{
+    height: 90px;
+    width: 100%;
+    background: rgb(236,240,241);
+    box-shadow: 1px 1px  20px gray;
+    
+}
+
+header ul img{
+   display: inline-block;
+    padding-top: 10px;
+    margin-right: 10px;
+    width: 200px;
+    height: 80px;
+    
+}
+
+header ul li a{
+    text-decoration: none;
+     color: gray;
+    
+}
+
+header ul li a:hover{
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-bottom-color: red;
+    color: #000; 
+    
+    
+}
+
+/* corpo da pagina inicial*/
+.caixa{
+    width: 60%;
+    height: 600px;
+    background: white;
+    margin-left: 20%;
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 30px;
+    opacity: 0.6;
+}
+
+.caixa a{
+  border: 8px solid   #ff0000;
+  padding: 15px 40px;
+  color:  #ff0000;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 40%;
+    position: relative;
+    top: 40px;
+
+    
+   
+    
+    
+}
+
+.caixa p{
+    font-family: "Segoe UI";
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
+    padding-left: 20px;
+   
+    
+}
+.caixa .msg{
+    font-family: "Segoe UI";
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.btn:hover {
+  color: #ff0000;
+  border: 5px solid #ff0000;
+}
+
+.conteudo-caixa{
+    margin-top: 30%;
+    height: 290px;
+}
+
+/*RODAPE*/
+footer .rodape{
+    height: 180px;
+    width: 100%;
+    background: rgb(236,240,241);
+    box-shadow: 1px 1px  20px gray;
+    margin-top: 670px;
+}
+footer .rodape p{
+    text-align: center;
+    padding-top: 60px;
+    font-size: 18px;
+    color: gray;
+}
+ 
+
