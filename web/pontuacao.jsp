@@ -1,7 +1,7 @@
 <%-- 
-    Document   : home
-    Created on : 08/05/2018, 16:39:48
-    Author     : Outline
+    Document   : pontuacao
+    Created on : 10/05/2018, 15:11:25
+    Author     : Ton
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <title>Inicio</title>
+        <title>Ranking</title>
     </head>
     <body background="img/fundo2.jpg">
         <header>
@@ -37,14 +37,36 @@
                 <img src="img/hferro.png">
             </div>  
         
-            <div class="caixa">
-               <div class="conteudo-caixa">
-                <p>Bem Vindo ao Marvel Quiz!</p>
-                <p class="msg">Aqui você pode aprender muito mais sobre seus heróis</p>
-                <p class="msg"> brincando!</p>
-                <a href="login.jsp">Acessar</a>
+            <div class="caixa caixa-pontuacao">
+              
+                <p class="titulo-pontuacao"> Ranking de Jogadores</p>
+                
+                <div class="tabela-pontuacao">
+                    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Qtde Acertos</th>
+        <th>Qtde Erros</th>
+        <th>Pontuação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Macir Tude</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+        <td>john@example.com</td>
+      </tr>
+    </tbody>
+  </table>
                 </div>
-            </div>
+                
+                </div>
+        <div class="botoes-pt">
+                <a class="btn-pt" href="quiz.jsp">Retornar ao Quiz</a>
+                <a class="btn-pt" href="home.jsp">Retornar ao Inicio</a>
+                </div>
         
         <footer>
             <div class="rodape">

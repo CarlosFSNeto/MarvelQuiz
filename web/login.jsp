@@ -1,7 +1,7 @@
 <%-- 
-    Document   : home
-    Created on : 08/05/2018, 16:39:48
-    Author     : Outline
+    Document   : login
+    Created on : 10/05/2018, 15:09:42
+    Author     : Ton
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <title>Inicio</title>
+        <title>Login</title>
     </head>
     <body background="img/fundo2.jpg">
         <header>
@@ -38,11 +38,13 @@
             </div>  
         
             <div class="caixa">
-               <div class="conteudo-caixa">
-                <p>Bem Vindo ao Marvel Quiz!</p>
-                <p class="msg">Aqui você pode aprender muito mais sobre seus heróis</p>
-                <p class="msg"> brincando!</p>
-                <a href="login.jsp">Acessar</a>
+               <div>
+                    <img src="img/deadpool.jpg" class="user">
+                </div>
+                <div class="form-group usuario-input">
+                <label for="usr">Informe seu nome para acessar:</label>
+                <input type="text" class="form-control" id="usr">
+                    <a href="#" class="btn-login" >Login</a>
                 </div>
             </div>
         
