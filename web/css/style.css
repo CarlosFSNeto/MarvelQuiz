@@ -64,10 +64,10 @@ header ul li a:hover{
 }
 
 .img1{
-   left: -450px;
+   left: -502px;
 }
 .img2{
-   left: 730px;
+   left: 530px;
 }
 
 
@@ -137,9 +137,9 @@ header ul li a:hover{
 
 /* pagina login de usuario*/
 .caixa .user{
-    opacity: 0.8;
+    opacity: 0.7;
     position: relative;
-    left: 360px;
+    left: 295px;
     top: 40px;
     width: 230px;
     height: 220px;
