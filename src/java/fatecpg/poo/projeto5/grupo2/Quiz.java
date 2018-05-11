@@ -6,23 +6,19 @@ import java.util.Date;
 
 public class Quiz {
     private static Question[] questionList = new Question[]{
-        //TODO Cadastrar as perguntas conforme as linhas abaixo:
-        new Question("1Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("2Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("3Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("4Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("5Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("6Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("7Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("8Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("9Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("10Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("11Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("12Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("13Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("14Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
-        new Question("15Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"})
-        
+        //TODO Cadastrar mais perguntas
+        new Question("Qual herói da Marvel utiliza um martelo?", "Thor", new String[]{"Thor", "Homem-Aranha", "Chapolin", "Capitão América"}),
+        new Question("Onde se passa a história do Pantera Negra?", "Wakanda", new String[]{"Nova York", "São Vicente", "Wakanda", "Nigéria"}),
+        new Question("Quem comanda a SHIELD?", "Nick Fury", new String[]{"Nick Fury", "Capitão América", "Reed Richards", "Tony Stark"}),
+        new Question("Qual atriz interpreta a Viúva Negra?", "Scarlett Johansson", new String[]{"Chloe Bennet", "Elizabeth Olsen", "Emma Watson", "Scarlett Johansson"}),
+        new Question("De acordo com o site adorocinema, Joss Whedon (diretor de diversos filmes da UCM, como Os Vingadores) disse que uma série importante da Marvel foi criada contra a vontade do estúdio. Que série foi essa?", "Agents of SHIELD", new String[]{"Jéssica Jones", "Demolidor", "Agent Carter", "Agents of SHIELD"}),
+        new Question("Atualmente (abril de 2016), o Homem Aranha foi recuperado pela Marvel. Antes, seus direitos estavam com quem?", "Sony", new String[]{"DC", "Fox", "Sony", "Warner Bros"}),
+        new Question("Qual foi a primeira super heroína com poderes inumanos a aparecer no UCM?", "Daisy Johnson", new String[]{"Viúva Negra", "Feiticeira Escarlate", "Daisy Johnson", "Harpia"}),
+        new Question("Stan Lee aparece em quase todos os filmes da Marvel. Onde ele aparece em Os Vingadores?", "Em um telejornal", new String[]{"Em um telejornal", "Em um asilo", "Em um leilão", "Vendendo cachorro-quente"}),
+        new Question("Qual destes NÃO é um vilão da Marvel?", "General Zod", new String[]{"Caveira Vermelha", "General Zod", "MODOK", "Arnim Zola"}),
+        new Question("Qual mutante que, assim como Wolverine, tem o poder de cura?", "Deadpool", new String[]{"Magneto", "Noturno", "Ciclope", "Deadpool"}),
+        new Question("Quem foi o primeiro vingador?", "Capitão América", new String[]{"Capitão América", "Homem-Aranha", "Homem de Ferro", "Hulk"}),
+ 
     };
     
     public static ArrayList<Quiz> topTenQuizzes = new ArrayList<>();
