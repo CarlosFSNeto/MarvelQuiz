@@ -22,9 +22,9 @@
                 <ul>
                     <img src="img/marvel.png">
                     <li><a href="home.jsp">Inicio</a></li>
-                    <li><a href="#">Quiz</a></li>
+                    <li><a href="quiz.jsp">Quiz</a></li>
                     <li><a href="pontuacao.jsp">Pontuação</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="sobre.jsp">Sobre</a></li>
                     
                 </ul>
             </div>
@@ -37,7 +37,7 @@
                 <img src="img/hferro.png">
             </div>  
         
-            <div class="caixa caixa-pontuacao">
+            <div class="caixa caixa-pontuacao" id="div">
               
                 <p class="titulo-pontuacao"> Ranking de Jogadores</p>
                 
@@ -73,5 +73,6 @@
                 <p> ©2018 Marvel Quiz</p>
             </div>
         </footer>
+         <script src="js/config.js"></script>
     </body>
 </html>

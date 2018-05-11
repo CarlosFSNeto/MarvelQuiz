@@ -24,7 +24,7 @@
                     <li><a href="home.jsp">Inicio</a></li>
                     <li><a href="#">Quiz</a></li>
                     <li><a href="pontuacao.jsp">Pontuação</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="sobre.jsp">Sobre</a></li>
                     
                 </ul>
             </div>
@@ -37,11 +37,11 @@
                 <img src="img/hferro.png">
             </div>  
         
-            <div class="caixa">
+            <div class="caixa" id="div">
                <div class="conteudo-caixa">
                 <p>Bem Vindo ao Marvel Quiz!</p>
-                <p class="msg">Aqui você pode aprender muito mais sobre seus heróis</p>
-                <p class="msg"> brincando!</p>
+                <p class="msg">Aqui você pode aprender muito mais sobre seus heróis ;)</p>
+            
                 <a href="login.jsp">Acessar</a>
                 </div>
             </div>
@@ -51,5 +51,6 @@
                 <p> ©2018 Marvel Quiz</p>
             </div>
         </footer>
+         <script src="js/config.js"></script>
     </body>
 </html>
