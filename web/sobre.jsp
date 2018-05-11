@@ -40,10 +40,10 @@
         <div class="container caixa-sobre" id="div">
             <div class="equipe"><h1 >A equipe</h1></div> 
             <div class="row">
-                <div class="col-md-3 caixa-img"> <img src="img/deadpool.jpg" class="img-sobre"><p class="nome">Ailton Souza</p><p>Desenvolvedor</p></div>
-                <div class="col-md-3 caixa-img"> <img src="img/deadpool.jpg" class="img-sobre" ><p class="nome">Carlos</p><p>Desenvolvedor </p></div>
-                <div class="col-md-3 caixa-img"> <img src="img/deadpool.jpg" class="img-sobre" ><p class="nome">Edvaldo</p><p>Desenvolvedor</p></div>
-                <div class="col-md-3 caixa-img"> <img src="img/deadpool.jpg" class="img-sobre" ><p class="nome">Juniot</p><p>Desenvolvedor</p></div>
+                <div class="col-md-3 caixa-img"> <img src="img/ailton.jpg" class="img-sobre"><p class="nome">Ailton Souza</p><p>Desenvolvedor</p></div>
+                <div class="col-md-3 caixa-img"> <img src="img/deadpool.jpg" class="img-sobre" ><p class="nome">Carlos Ferreira</p><p>Desenvolvedor </p></div>
+                <div class="col-md-3 caixa-img"> <img src="img/deadpool.jpg" class="img-sobre" ><p class="nome">Edvaldo Augusto</p><p>Desenvolvedor</p></div>
+                <div class="col-md-3 caixa-img"> <img src="img/deadpool.jpg" class="img-sobre" ><p class="nome">José Cordeiro</p><p>Desenvolvedor</p></div>
             </div>
         </div>
         
