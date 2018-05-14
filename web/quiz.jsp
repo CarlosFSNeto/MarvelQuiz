@@ -21,7 +21,7 @@
             <div class="menu">
                 
                 <ul>
-                    <img src="img/marvel.png">
+                    <img src="img/marvel.png"><img/>
                     <li><a href="home.jsp">Inicio</a></li>
                     <li><a href="quiz.jsp">Quiz</a></li>
                     <li><a href="pontuacao.jsp">Pontuação</a></li>
@@ -40,12 +40,16 @@
         
         <div class="Quiz" id="div">
             
-                    <form>
+            <% 
+            
+            %>
+            
+        <form>
             
             <%
                 
-    %>
-            </hr>
+            %>
+            <hr/>
             <input type="submit" name="tested" value="Enviar"/>
         </form>
 
