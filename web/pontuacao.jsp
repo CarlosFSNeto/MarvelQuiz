@@ -46,27 +46,19 @@
                     <table class="table table-hover">
     <thead>
       <tr>
-          <%
-              String teste = "";
-              for (int i= 0; i <= Quiz.topTenQuizzes.size(); i++ ){
-              %>
-                <% teste = Quiz.topTenQuizzes.get(i).getUser().getName();  %>
-              <br> <%=teste%>
-              <%}%>
-          
         <th>Nome</th>
-        <th>Qtde Acertos</th>
-        <th>Qtde Erros</th>
-        <th>Pontuação</th>
+        <th>Data</th>
+        <th>Pontuação (%)</th>
       </tr>
     </thead>
     <tbody>
+        <%for (int i=0; i<Quiz.topTenQuizzes.size(); i++){%>
       <tr>
-        <td>John Macir Tude</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
+          <td><%=Quiz.topTenQuizzes.get(i).getUser().getName()%></td>
+        <td><%=Quiz.topTenQuizzes.get(i).getDate()%></td>
+        <td><%=Quiz.topTenQuizzes.get(i).getGrade()%></td>
       </tr>
+      <%}%>
     </tbody>
   </table>
                 </div>

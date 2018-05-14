@@ -10,31 +10,23 @@
 <%
     
     HttpSession s = request.getSession();
-    Quiz quiz;
+    User user = (User)s.getAttribute("user");
     boolean tested = false;
     double grade = 0d;
     
-    
     if (request.getParameter("tested")!=null){
-        User user = (User)s.getAttribute("user");
         Quiz last = (Quiz)s.getAttribute("quiz");
         tested = true;
         int count = 0;
-        //Quiz last = user.getFinishedQuizzes().get(user.getFinishedQuizzes().size()-1);
         for (int i=0; i<10; i++){
             Question qq = last.getTest().get(i);
             String p = qq.getQuestion();
-            if (qq.getAnswer().equals(p)){
+            if (qq.getAnswer().equals(request.getParameter(p))){
                 count++;
             }
         }
         grade = 100d * ((double)count/10d);
         last.finishTest(grade);
-    } else {
-        User user = new User("Carlos"); //TODO receber o User da session ao invés de criar um novo
-        quiz = new Quiz(user);
-        s.setAttribute("quiz", quiz);
-        s.setAttribute("user", user);
     }
 %>
 <html>
@@ -72,13 +64,14 @@
             <%if (!tested){%>
             <form>
             <%
-                Quiz q = (Quiz)s.getAttribute("quiz");
-                //user.getFinishedQuizzes().add(q);
+                Quiz q = new Quiz(user);
+                request.getSession().removeAttribute("quiz");
+                request.getSession().setAttribute("quiz", q);
                for (Question question:q.getTest()){
             %>
             <h2><%=question.getQuestion() %></h2>
             <% for (int i=0; i<question.getAlternatives().length; i++){ %>
-                <input type="radio" name=<%=question.getQuestion()%> value=<%=question.getAlternatives()[i]%>/> <%=question.getAlternatives()[i]%> <br/>
+                <input type="radio" name="<%=question.getQuestion()%>" value="<%=question.getAlternatives()[i]%>"/> <%=question.getAlternatives()[i]%> <br/>
             <%}}%>
             </hr>
             <br/><input type="submit" name="tested" value="Enviar"/>

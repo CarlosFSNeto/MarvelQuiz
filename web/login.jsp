@@ -75,8 +75,19 @@
                 </div>
                 <%}else{%>
                 <div>
-                    <h3>Bem vindo, <%=user.getName()%></h3>
-                    <h4>Sua média é <%=user.getUserAverageGrade()%></h4>
+                    <h3>Bem vindo, <%=user.getName()%>!</h3>
+                    <%if(!user.getFinishedQuizzes().isEmpty()){%>
+                    <h4>Sua média de acertos é de <%=user.getUserAverageGrade()%>%</h4>
+                    <h4>Últimos quizzes:</h4>
+                    <table>
+                        <tr><th>Data</th><th>Nota(%)</th></tr>
+                        <%for (int i=user.getFinishedQuizzes().size()-1; i>=0; i--){%>
+                        <tr><td><%=user.getFinishedQuizzes().get(i).getDate()%></td><td><%=user.getFinishedQuizzes().get(i).getGrade()%></td></tr>
+                        <%}%>
+                    </table>
+                    <%}%>
+                    <table></table>
+                    <a href="quiz.jsp">Iniciar Quiz</a>
                 </div>
                 <%}%>
             </div>
