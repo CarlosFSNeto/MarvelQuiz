@@ -192,7 +192,7 @@ header ul li a:hover{
 }
 
 .caixa-pontuacao{
-    height: 600px;
+    height: auto;
 }
 
 .usuario-input .btn-login:hover{
@@ -224,9 +224,10 @@ header ul li a:hover{
 .botoes-pt{
     
     width: 420px;
-    position: absolute;
+    position: relative;
     bottom: -30px;
     left: 350px;
+    margin-top: 650px;
     
 }
 .btn-pt{
