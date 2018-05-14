@@ -22,7 +22,11 @@ public class Quiz {
         new Question("Qual mutante que, assim como Wolverine, tem o poder de cura?", "Deadpool", new String[]{"Magneto", "Noturno", "Ciclope", "Deadpool"}),
         new Question("Quem foi o primeiro vingador?", "Capitão América", new String[]{"Capitão América", "Homem-Aranha", "Homem de Ferro", "Hulk"}),
         new Question("Qual a ciadade do Homem-Aranha?", "Nova Iorque", new String[]{"Nova Iorque", "Filadélfia", "Los Angeles", "Detroit"}),
- 
+        new Question("Qual o nome do Ator que viveu o homem-Aranha na primeira Trilogia?", "Tobey Maguire", new String[]{"Tobey Maguire", "Ben Affleck", "Peter Garfield", "Leonardo Di Caprio"}),
+        new Question("Qual o nome do Vilao de 'Vingadores - Guerra Infinita", "Thanos", new String[]{"Dr. Octopus", "Loki", "Thanos", "Coringa"}),
+        new Question("Qual do Nome do Cientista que se torna o Hulk?", "Bruce Banner", new String[]{"Harry Osborn", "Steve Rogers", "Bruce Wayne", "Bruce Banner"}),
+        new Question("Qual o nome do Guardiao do Portal de Asgard?", "Heindall", new String[]{"Caveira Vermelha", "Heindall", "Zeus", "Dexter Morgan"}),
+        
     };
     
     public static ArrayList<Quiz> topTenQuizzes = new ArrayList<>();
