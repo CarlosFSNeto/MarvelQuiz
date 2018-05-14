@@ -8,6 +8,24 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="fatecpg.poo.projeto5.grupo2.User"%>
 <!DOCTYPE html>
+<%
+    if (request.getParameter("acessar")!=null){
+        User u = new User(request.getParameter("u"));
+        request.getSession().setAttribute("user", u);
+        boolean oldUser=false;
+        
+        for (User x:User.userList){
+            if (x.getName().equals(u.getName())){
+                oldUser=true;
+                request.getSession().setAttribute("user", x);
+                break;
+            }
+        }
+        if (!oldUser){
+            User.userList.add(u);
+        }
+    }
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,17 +61,24 @@
                <div>
                     <img src="img/deadpool.jpg" class="user">
                 </div>
-                <div class="form-group usuario-input">
-                <label for="usr">Informe seu nome para acessar:</label>
-                <input type="text" class="form-control" id="usr">
-                     <%
-                User t = new User("");
-                session.setAttribute("teste", t);
-                User nome = (User)session.getAttribute("teste");
-                out.println(nome);
+                <%
+                    HttpSession s = request.getSession(true);
+                    User user = (User)s.getAttribute("user");
+                    if (user==null){
                 %>
-                    <a href="#" class="btn-login" >Login</a>
+                <div class="form-group usuario-input">
+                    <form>
+                        <label for="usr">Informe seu nome para acessar:</label>
+                        <input type="text" class="form-control" id="usr" name="u">
+                    <input type="submit" value="Acessar" name="acessar"/>
+                    </form>
                 </div>
+                <%}else{%>
+                <div>
+                    <h3>Bem vindo, <%=user.getName()%></h3>
+                    <h4>Sua média é <%=user.getUserAverageGrade()%></h4>
+                </div>
+                <%}%>
             </div>
         
         <footer>
