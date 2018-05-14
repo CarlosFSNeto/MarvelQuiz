@@ -79,12 +79,13 @@
         </form>
             <%} else{%>
             <h2>Você acertou <%=grade%>% das questões!</h2>
-            <%}%>         
-        </div>
-             <div class="botoes-pt">
+            <div class="botoes-pt">
                 <a class="btn-pt" href="quiz.jsp">Retornar ao Quiz</a>
                 <a class="btn-pt" href="home.jsp">Retornar ao Inicio</a>
-                </div>
+             </div>
+            <%}%>         
+        </div>
+             
         
         <footer>
             <div class="rodape rodape-sobre">
