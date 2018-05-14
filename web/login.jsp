@@ -4,7 +4,9 @@
     Author     : Ton
 --%>
 
+<%@page import="org.eclipse.jdt.internal.compiler.parser.Parser"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="fatecpg.poo.projeto5.grupo2.User"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -44,6 +46,12 @@
                 <div class="form-group usuario-input">
                 <label for="usr">Informe seu nome para acessar:</label>
                 <input type="text" class="form-control" id="usr">
+                     <%
+                User t = new User("");
+                session.setAttribute("teste", t);
+                User nome = (User)session.getAttribute("teste");
+                out.println(nome);
+                %>
                     <a href="#" class="btn-login" >Login</a>
                 </div>
             </div>
