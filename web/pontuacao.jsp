@@ -61,14 +61,16 @@
       <%}%>
     </tbody>
   </table>
+    
                 </div>
-                
-                </div>
-        <div class="botoes-pt">
+             
+            </div><br><br>
+             <br>
+       
+           <div class="botoes-pt">
                 <a class="btn-pt" href="quiz.jsp">Retornar ao Quiz</a>
                 <a class="btn-pt" href="home.jsp">Retornar ao Inicio</a>
-                </div>
-        
+             </div>
         <footer>
             <div class="rodape">
                 <p> ©2018 Marvel Quiz</p>
