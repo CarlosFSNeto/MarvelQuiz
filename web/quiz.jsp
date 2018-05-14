@@ -59,10 +59,10 @@
         <div class="img2">
                 <img src="img/hferro.png">
             </div>  
+       
         
         <div class="caixaquiz" id="div">
-        
-            <%if (!tested){%>
+          <%if (!tested){%>
             <form>
             <%
                 Quiz q = new Quiz(user);
@@ -79,9 +79,12 @@
         </form>
             <%} else{%>
             <h2>Você acertou <%=grade%>% das questões!</h2>
-            <%}%>
-        
+            <%}%>         
         </div>
+             <div class="botoes-pt">
+                <a class="btn-pt" href="quiz.jsp">Retornar ao Quiz</a>
+                <a class="btn-pt" href="home.jsp">Retornar ao Inicio</a>
+                </div>
         
         <footer>
             <div class="rodape rodape-sobre">
