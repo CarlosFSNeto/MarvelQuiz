@@ -36,7 +36,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body background="img/fundo2.jpg" >
         <header>
@@ -60,7 +60,8 @@
                 <img src="img/hferro.png">
             </div>  
         
-        <div class="Quiz" id="div">
+        <div class="caixaquiz" id="div">
+        
             <%if (!tested){%>
             <form>
             <%
@@ -74,11 +75,12 @@
                 <input type="radio" name="<%=question.getQuestion()%>" value="<%=question.getAlternatives()[i]%>"/> <%=question.getAlternatives()[i]%> <br/>
             <%}}%>
             </hr>
-            <br/><input type="submit" name="tested" value="Enviar"/>
+            <br/><center><input type="submit" name="tested" value="Enviar"/></center><br>
         </form>
             <%} else{%>
             <h2>Você acertou <%=grade%>% das questões!</h2>
             <%}%>
+        
         </div>
         
         <footer>

@@ -83,6 +83,21 @@ header ul li a:hover{
     
 }
 
+.caixaquiz{
+    width: auto;
+    height: auto;
+    background: rgba(200,255,255,0.5);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top:30px;
+    position: relative;
+    border-radius: 15px;
+    
+    display: none;
+    position: relative;
+    top: -650px;
+    
+}
 .caixa a{
   border: 8px solid   rgb(130,14,15);
   padding: 15px 40px;
