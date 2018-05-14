@@ -4,6 +4,7 @@
     Author     : Ton
 --%>
 
+<%@page import="fatecpg.poo.projeto5.grupo2.Quiz"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -45,6 +46,14 @@
                     <table class="table table-hover">
     <thead>
       <tr>
+          <%
+              String teste = "";
+              for (int i= 0; i <= Quiz.topTenQuizzes.size(); i++ ){
+              %>
+                <% teste = Quiz.topTenQuizzes.get(i).getUser().getName();  %>
+              <br> <%=teste%>
+              <%}%>
+          
         <th>Nome</th>
         <th>Qtde Acertos</th>
         <th>Qtde Erros</th>

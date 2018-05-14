@@ -40,6 +40,8 @@ public class Quiz {
 //        }
 //        System.out.println(q.date.toLocaleString());
 //    }
+    
+    
     public Quiz(User user) {
         this.user = user;
         grade = 0d;
@@ -96,4 +98,7 @@ public class Quiz {
             }
         }
     }
+    public ArrayList<Question> getTest() { return this.test;
+    }
+
 }

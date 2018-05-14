@@ -3,6 +3,8 @@
     Created on : 13/05/2018, 19:43:41
     Author     : fotoa
 --%>
+<%@page import="fatecpg.poo.projeto5.grupo2.Question"%>
+<%@page import="fatecpg.poo.projeto5.grupo2.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -36,7 +38,16 @@
                 <img src="img/hferro.png">
             </div>  
         
-        <div class="container caixa-sobre" id="div">
+        <div class="Quiz" id="div">
+            
+                    <form>
+            
+            <%
+                
+    %>
+            </hr>
+            <input type="submit" name="tested" value="Enviar"/>
+        </form>
 
         </div>
         
