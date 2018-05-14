@@ -7,6 +7,27 @@
 <%@page import="fatecpg.poo.projeto5.grupo2.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    User user = new User("Carlos"); //TODO receber o User da session ao invés de criar um novo
+    boolean tested = false;
+    double grade = 0d;
+    
+    
+    if (request.getParameter("tested")!=null){
+        tested = true;
+        int count = 0;
+        Quiz last = user.getFinishedQuizzes().get(user.getFinishedQuizzes().size()-1);
+        for (int i=0; i<10; i++){
+            Question qq = last.getTest().get(i);
+            String p = qq.getQuestion();
+            if (qq.getAnswer().equals(p)){
+                count++;
+            }
+        }
+        grade = 100d * ((double)count/10d);
+        last.finishTest(grade);
+    }
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -39,16 +60,23 @@
             </div>  
         
         <div class="Quiz" id="div">
-            
-                    <form>
-            
+            <%if (!tested){%>
+            <form>
             <%
-                
-    %>
+                Quiz q = new Quiz(user); 
+                user.getFinishedQuizzes().add(q);
+               for (Question question:q.getTest()){
+            %>
+            <h2><%=question.getQuestion() %></h2>
+            <% for (int i=0; i<question.getAlternatives().length; i++){ %>
+                <input type="radio" name="<%=question.getQuestion()%>" value="<%=question.getAlternatives()[i] %>"> <%=question.getAlternatives()[i]%><br/>
+            <%}}%>
             </hr>
-            <input type="submit" name="tested" value="Enviar"/>
+            <br/><input type="submit" name="tested" value="Enviar"/>
         </form>
-
+            <%} else{%>
+            <h2>Você acertou <%=grade%>% das questões!</h2>
+            <%}%>
         </div>
         
         <footer>

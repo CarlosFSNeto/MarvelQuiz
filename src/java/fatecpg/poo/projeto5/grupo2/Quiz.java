@@ -71,7 +71,7 @@ public class Quiz {
     public void finishTest(double grade){
         this.grade = grade;
         this.date = Calendar.getInstance().getTime();
-        this.user.getFinishedQuizzes().add(this);
+        //this.user.getFinishedQuizzes().add(this);
         
         lastestTenQuizzes.add(0, this);
         if (lastestTenQuizzes.size()>10){
