@@ -45,7 +45,7 @@
                 <ul>
                     <img src="img/marvel.png">
                     <li><a href="home.jsp">Inicio</a></li>
-                    <li><a href="quiz.jsp">Quiz</a></li>
+                    <!--<li><a href="quiz.jsp">Quiz</a></li>-->
                     <li><a href="pontuacao.jsp">Pontuação</a></li>
                     <li><a href="sobre.jsp">Sobre</a></li>
                     

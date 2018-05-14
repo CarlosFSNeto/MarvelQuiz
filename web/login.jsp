@@ -9,6 +9,9 @@
 <%@page import="fatecpg.poo.projeto5.grupo2.User"%>
 <!DOCTYPE html>
 <%
+    if (request.getParameter("logout")!= null){
+        request.getSession().removeAttribute("user");
+    }
     if (request.getParameter("acessar")!=null){
         User u = new User(request.getParameter("u"));
         request.getSession().setAttribute("user", u);
@@ -42,7 +45,7 @@
                 <ul>
                     <img src="img/marvel.png">
                     <li><a href="home.jsp">Inicio</a></li>
-                    <li><a href="quiz.jsp">Quiz</a></li>
+                    <!--<li><a href="quiz.jsp">Quiz</a></li>-->
                     <li><a href="pontuacao.jsp">Pontuação</a></li>
                     <li><a href="sobre.jsp">Sobre</a></li>
                     
@@ -81,13 +84,16 @@
                     <h4>Últimos quizzes:</h4>
                     <table>
                         <tr><th>Data</th><th>Nota(%)</th></tr>
-                        <%for (int i=user.getFinishedQuizzes().size()-1; i>=0; i--){%>
+                        <%for (int i=user.getFinishedQuizzes().size()-1; (i>=0 && i>=user.getFinishedQuizzes().size()-10); i--){%>
                         <tr><td><%=user.getFinishedQuizzes().get(i).getDate()%></td><td><%=user.getFinishedQuizzes().get(i).getGrade()%></td></tr>
                         <%}%>
                     </table>
                     <%}%>
                     <table></table>
                     <a href="quiz.jsp">Iniciar Quiz</a>
+                    <form>
+                        <input type="submit" name="logout" value="Logout"/>
+                    </form>
                 </div>
                 <%}%>
             </div>
