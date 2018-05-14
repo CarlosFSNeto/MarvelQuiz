@@ -4,6 +4,7 @@
     Author     : Outline
 --%>
 
+<%@page import="fatecpg.poo.projeto5.grupo2.Quiz"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -44,6 +45,32 @@
             
                 <a href="login.jsp">Acessar</a>
                 </div>
+                
+                <!-- Arrumar daqui pra baixo -->
+        <p class="titulo-pontuacao"> Últimos quizzes realizados</p>
+            <div class="tabela-pontuacao">
+                    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Data</th>
+        <th>Pontuação (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+        <%for (int i=0; i<Quiz.lastestTenQuizzes.size(); i++){%>
+      <tr>
+          <td><%=Quiz.lastestTenQuizzes.get(i).getUser().getName()%></td>
+        <td><%=Quiz.lastestTenQuizzes.get(i).getDate()%></td>
+        <td><%=Quiz.lastestTenQuizzes.get(i).getGrade()%></td>
+      </tr>
+      <%}%>
+    </tbody>
+  </table>
+    
+                </div>
+    
+    
             </div>
         
         <footer>
